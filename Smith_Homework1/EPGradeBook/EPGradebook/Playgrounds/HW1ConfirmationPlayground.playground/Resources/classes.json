@@ -1,0 +1,180 @@
+[
+  {
+     "id" : "796D602A-15DE-41FF-901A-AF8C21CFD028",
+     "className" : "605.687 F2020",
+     "students" : [
+       {
+         "email" : "jane.doe@gmail.com",
+         "jhed" : "jdoe2",
+         "imageName" : "janedoe",
+         "program" : "Engineering",
+         "address" : "Blacksburg, VA",
+         "name" : "Jane Doe",
+         "assignmentGrades" : []
+       },
+       {
+         "email" : "tony@starkindustries.com",
+         "jhed" : "tstark",
+         "imageName" : "tonystark",
+         "program" : "Electrical and Computer Engineering",
+         "address" : "New York, New York",
+         "name" : "Tony Stark",
+         "assignmentGrades" : []
+       },
+       {
+         "email" : "tim.cook@apple.com",
+         "jhed" : "tcook",
+         "imageName" : "cook_hero",
+         "program" : "Engineering Management",
+         "address" : "Cupertino, CA",
+         "name" : "Tim Cook",
+         "assignmentGrades" : []
+       }
+     
+     ],
+     "pastTeachers" : [
+     ],
+     "currentTeacher": {
+       "affiliation" : "JHU\/APL",
+       "activelyTeaching" : [
+       ],
+       "startDate" : 460094400,
+       "highestDegree" : "Masters",
+       "currentRating" : 4,
+       "email" : "hococoder@gmail.com",
+       "jhed" : "rsteele3",
+       "imageName" : "josh",
+       "name" : "Josh Steele",
+       "classesTaught" : [
+       ]
+     }
+  },
+  {
+     "id" : "796D602A-15DE-41F1-901A-AF8C21CFD028",
+     "className" : "525.608 F2020",
+     "students" : [
+       {
+         "email" : "tony@starkindustries.com",
+         "jhed" : "tstark",
+         "imageName" : "tonystark",
+         "program" : "Electrical and Computer Engineering",
+         "address" : "New York, New York",
+         "name" : "Tony Stark",
+         "assignmentGrades" : []
+       }
+     
+     ],
+     "pastTeachers" : [
+     ],
+     "currentTeacher": {
+       "affiliation" : "JHU\/APL",
+       "activelyTeaching" : [
+       ],
+       "startDate" : 460094400,
+       "highestDegree" : "Masters",
+       "currentRating" : 4,
+       "email" : "hococoder@gmail.com",
+       "jhed" : "rsteele3",
+       "imageName" : "josh",
+       "name" : "Josh Steele",
+       "classesTaught" : [
+       ]
+     }
+  },
+  {
+     "id" : "796D602A-15DE-41F3-901A-AF8C21CFD028",
+     "className" : "645.662 F2020",
+     "students" : [
+       {
+         "email" : "tony@starkindustries.com",
+         "jhed" : "tstark",
+         "imageName" : "tonystark",
+         "program" : "Electrical and Computer Engineering",
+         "address" : "New York, New York",
+         "name" : "Tony Stark",
+         "assignmentGrades" : []
+       }
+     
+     ],
+     "pastTeachers" : [
+     ],
+     "currentTeacher": {
+       "affiliation" : "JHU\/APL",
+       "activelyTeaching" : [
+       ],
+       "startDate" : 460094400,
+       "highestDegree" : "Masters",
+       "currentRating" : 4,
+       "email" : "hococoder@gmail.com",
+       "jhed" : "rsteele3",
+       "imageName" : "josh",
+       "name" : "Josh Steele",
+       "classesTaught" : [
+       ]
+     }
+  },
+  {
+     "id" : "796D602A-15DE-41F3-901B-AF8C21CFD028",
+     "className" : "675.600 F2020",
+     "students" : [
+       {
+         "email" : "tony@starkindustries.com",
+         "jhed" : "tstark",
+         "imageName" : "tonystark",
+         "program" : "Electrical and Computer Engineering",
+         "address" : "New York, New York",
+         "name" : "Tony Stark",
+         "assignmentGrades" : []
+       }
+     
+     ],
+     "pastTeachers" : [
+     ],
+     "currentTeacher": {
+       "affiliation" : "JHU\/APL",
+       "activelyTeaching" : [
+       ],
+       "startDate" : 460094400,
+       "highestDegree" : "Masters",
+       "currentRating" : 4,
+       "email" : "hococoder@gmail.com",
+       "jhed" : "rsteele3",
+       "imageName" : "josh",
+       "name" : "Josh Steele",
+       "classesTaught" : [
+       ]
+     }
+  },
+  {
+     "id" : "796D602A-15DE-41F3-901C-AF8C21CFD028",
+     "className" : "615.641 F2020",
+     "students" : [
+       {
+         "email" : "tony@starkindustries.com",
+         "jhed" : "tstark",
+         "imageName" : "tonystark",
+         "program" : "Electrical and Computer Engineering",
+         "address" : "New York, New York",
+         "name" : "Tony Stark",
+         "assignmentGrades" : []
+       }
+     
+     ],
+     "pastTeachers" : [
+     ],
+     "currentTeacher": {
+       "affiliation" : "JHU\/APL",
+       "activelyTeaching" : [
+       ],
+       "startDate" : 460094400,
+       "highestDegree" : "Masters",
+       "currentRating" : 4,
+       "email" : "hococoder@gmail.com",
+       "jhed" : "rsteele3",
+       "imageName" : "josh",
+       "name" : "Josh Steele",
+       "classesTaught" : [
+       ]
+     }
+  }
+]

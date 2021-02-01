@@ -1,0 +1,53 @@
+[
+  {
+    "id" : "796D603A-15DE-41FF-901A-AF8C21CFD028",
+    "name" : "Development Log 1",
+    "releaseDate" : 621725430,
+    "dueDate" : 621725430,
+    "description" : "Development Log 1 Description",
+    "maxGrade" : 100.0,
+    "assignmentType" : "Development Log",
+    "averageRating" : 4.0
+  },
+  {
+    "id" : "0C3DDC3D-5634-478C-AD8F-58C79FBD8EFB",
+    "name" : "Development Log 2",
+    "releaseDate" : 621725430,
+    "dueDate" : 621725430,
+    "description" : "Development Log 2 Description",
+    "maxGrade" : 100.0,
+    "assignmentType" : "Development Log",
+    "averageRating" : 4.0
+  },
+  {
+    "id" : "0C3DDC3D-5634-578C-AD8F-58C79FBD8EFB",
+    "name" : "Development Log 3",
+    "releaseDate" : 621725430,
+    "dueDate" : 621725430,
+    "description" : "Development Log 2 Description",
+    "maxGrade" : 100.0,
+    "assignmentType" : "Development Log",
+    "averageRating" : 4.0
+  },
+  {
+    "id" : "0C3DDC3D-5634-678C-AD8F-58C79FBD8EFB",
+    "name" : "Programming Assignment 1",
+    "releaseDate" : 621725430,
+    "dueDate" : 621725430,
+    "description" : "Programming Assignment 1 Description",
+    "maxGrade" : 100.0,
+    "assignmentType" : "Weekly Completion",
+    "averageRating" : 4.0
+  },
+  {
+    "id" : "0C3DDC3D-5634-778C-AD8F-58C79FBD8EFB",
+    "name" : "Programming Assignment 2",
+    "releaseDate" : 621725430,
+    "dueDate" : 621725430,
+    "description" : "Programming Assignment 2 Description",
+    "maxGrade" : 100.0,
+    "assignmentType" : "Weekly Completion",
+    "averageRating" : 4.0
+  }
+]
+
