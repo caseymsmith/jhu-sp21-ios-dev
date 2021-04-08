@@ -1,0 +1,29 @@
+{
+  "products" : [
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "09A14C42",
+      "localizations" : [
+        {
+          "description" : "Disables ads on the About screen",
+          "displayName" : "Disable Ads",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "edu.jhu.ep.steele.josh.EPGradebookS2021.DisableAds",
+      "referenceName" : "DisableAds",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 1,
+    "minor" : 0
+  }
+}

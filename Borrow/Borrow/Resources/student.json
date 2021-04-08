@@ -1,0 +1,38 @@
+[
+  {
+    "email" : "john.smith@gmail.com",
+    "jhed" : "jsmith2",
+    "imageName" : "johnsmith",
+    "program" : "Computer Science",
+    "address" : "Columbia, MD",
+    "name" : "John Smith",
+    "assignmentGrades" : []
+  },
+  {
+    "email" : "jane.doe@gmail.com",
+    "jhed" : "jdoe2",
+    "imageName" : "janedoe",
+    "program" : "Engineering",
+    "address" : "Blacksburg, VA",
+    "name" : "Jane Doe",
+    "assignmentGrades" : []
+  },
+  {
+    "email" : "tony@starkindustries.com",
+    "jhed" : "tstark",
+    "imageName" : "tonystark",
+    "program" : "Electrical and Computer Engineering",
+    "address" : "New York, New York",
+    "name" : "Tony Stark",
+    "assignmentGrades" : []
+  },
+  {
+    "email" : "tim.cook@apple.com",
+    "jhed" : "tcook",
+    "imageName" : "cook_hero",
+    "program" : "Engineering Management",
+    "address" : "Cupertino, CA",
+    "name" : "Tim Cook",
+    "assignmentGrades" : []
+  }
+]

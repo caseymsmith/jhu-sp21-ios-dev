@@ -2,79 +2,106 @@
 //  ContentView.swift
 //  Borrow
 //
-//  Created by Casey on 1/31/21.
+//  Created by Casey on 1/20/21.
 //
 
 import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
+  
+  @State private var selection = 1
+  @State var model: AssignmentGraderModel
+  
+  var body: some View {
+    CoreDataView(selection: selection, model: $model)
+  }
+}
 
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
+//
+//struct JSONDataView: View {
+//  
+//  @Binding var selection: Int
+//  @Binding var model: AssignmentGraderModel
+//  
+//  var body: some View {
+//    
+//    TabView(selection: $selection) {
+//      
+//      CourseClassView(courseClass: model.schoolClasses[0])
+//        .tabItem{ Text("Class") }
+//        .tag(1)
+//      AssignmentsTableView(assignments: model.assignments)
+//        .tabItem{ Text("Assignments") }
+//        .tag(2)
+//      StudentsView(student: model.students[0])
+//        .tabItem{ Text("Student") }
+//        .tag(3)
+//      TeacherView(teacher: model.teachers[0])
+//        .tabItem{ Text("Teacher") }
+//        .tag(4)
+//    }
+//    
+//  }
+//  
+//}
 
-    var body: some View {
-        List {
-            ForEach(items) { item in
-                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-            }
-            .onDelete(perform: deleteItems)
-        }
-        .toolbar {
-            #if os(iOS)
-            EditButton()
-            #endif
+struct CoreDataView: View {
+  
+  @State var selection = 1
+  @Binding var model: AssignmentGraderModel
+  @Environment(\.managedObjectContext) var context
+  
+  @FetchRequest(
+    entity: AssignmentEntity.entity(),
+    sortDescriptors: [
+      NSSortDescriptor(keyPath: \AssignmentEntity.name, ascending: true),
+  ]) var assignments: FetchedResults<AssignmentEntity>
 
-            Button(action: addItem) {
-                Label("Add Item", systemImage: "plus")
-            }
-        }
-    }
+  @FetchRequest(
+    entity: CourseClassEntity.entity(),
+    sortDescriptors: [
+      NSSortDescriptor(keyPath: \CourseClassEntity.courseClassName, ascending: true),
+  ]) var courseClasses: FetchedResults<CourseClassEntity>
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+  @FetchRequest(
+    entity: TeacherEntity.entity(),
+    sortDescriptors: [
+      NSSortDescriptor(keyPath: \TeacherEntity.name, ascending: true),
+  ]) var teachers: FetchedResults<TeacherEntity>
+  
+  @FetchRequest(entity: StudentEntity.entity(),
+                sortDescriptors: [NSSortDescriptor(keyPath: \StudentEntity.name, ascending: true),
+  ]) var students: FetchedResults<StudentEntity>
+  
+  init(selection: Int, model: Binding<AssignmentGraderModel>) {
+    _model = model
 
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
+    self.selection = selection
+    let options:UNAuthorizationOptions = [.alert, .sound]
 
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
+    UNUserNotificationCenter.current().requestAuthorization(options: options, completionHandler: {
+       success, error in
+        guard success == true else { print("Access not granted or error"); return }
+        print("notification access granted")
+    })
+  }
+  
+  var body: some View {
+      TabView(selection: $selection) {
+        HomeView()
+          .tabItem { Image(systemName: "house.fill") ; Text("Home") }
+          .tag(1)
+        MessagesView(contentMessage: "Hello", isCurrentUser: true).tabItem { Image(systemName: "message.circle") ; Text("Messages") }.tag(2)
+        HistoryView().tabItem { Image(systemName: "clock") ; Text("History") }.tag(3)
+        AccountView().tabItem { Image(systemName: "person.circle") ; Text("My Account") }
+          .tag(4)
+      }
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
-
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
+  static var previews: some View {
+    ContentView(model: ClassAssignmentsModel.designModel)
+  }
 }
