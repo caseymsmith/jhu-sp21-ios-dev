@@ -42,8 +42,12 @@ struct LoginScreen: View {
                         self.saveUserName(userName: self.username)
                         self.userAuth.login()
                     }, label: { Text("Login") })
+                    Button(action: {
+                        //TODO: Add sign up screen
+                    }, label: { Text("Sign Up") })
                     Spacer(minLength: 50)
 
+                    
                     //TODO: Update login with facebook button using SDK for more iconic button
                     Button(action: {
                         

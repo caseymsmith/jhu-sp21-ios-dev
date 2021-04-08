@@ -92,8 +92,8 @@ struct CoreDataView: View {
         HomeView()
           .tabItem { Image(systemName: "house.fill") ; Text("Home") }
           .tag(1)
-        AssignmentsTableView(assignments: assignments.map{ Assignment(assignmentEntity: $0) }).tabItem { Image(systemName: "message.circle") ; Text("Messages") }.tag(2)
-        StudentsView(student: ClassAssignmentsModelTestData().students![0]).tabItem { Image(systemName: "clock") ; Text("History") }.tag(3)
+        MessagesView(contentMessage: "Hello", isCurrentUser: true).tabItem { Image(systemName: "message.circle") ; Text("Messages") }.tag(2)
+        HistoryView().tabItem { Image(systemName: "clock") ; Text("History") }.tag(3)
         AccountView().tabItem { Image(systemName: "person.circle") ; Text("My Account") }
           .tag(4)
       }

@@ -38,10 +38,10 @@
 		C9C85763261B779B00BAE079 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9C8572F261B779A00BAE079 /* Preview Assets.xcassets */; };
 		C9C85764261B779B00BAE079 /* EPGradebookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85730261B779A00BAE079 /* EPGradebookApp.swift */; };
 		C9C85765261B779B00BAE079 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85732261B779A00BAE079 /* AccountView.swift */; };
-		C9C85766261B779B00BAE079 /* StudentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85733261B779A00BAE079 /* StudentsView.swift */; };
+		C9C85766261B779B00BAE079 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85733261B779A00BAE079 /* HistoryView.swift */; };
 		C9C85767261B779B00BAE079 /* TeacherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85734261B779A00BAE079 /* TeacherView.swift */; };
 		C9C85768261B779B00BAE079 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85735261B779B00BAE079 /* MailView.swift */; };
-		C9C85769261B779B00BAE079 /* AssignmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85736261B779B00BAE079 /* AssignmentView.swift */; };
+		C9C85769261B779B00BAE079 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85736261B779B00BAE079 /* MessagesView.swift */; };
 		C9C8576A261B779B00BAE079 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85737261B779B00BAE079 /* MapView.swift */; };
 		C9C8576B261B779B00BAE079 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85738261B779B00BAE079 /* HomeView.swift */; };
 		C9C85773261B779B00BAE079 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85741261B779B00BAE079 /* LoginScreen.swift */; };
@@ -109,10 +109,10 @@
 		C9C8572F261B779A00BAE079 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C9C85730261B779A00BAE079 /* EPGradebookApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPGradebookApp.swift; sourceTree = "<group>"; };
 		C9C85732261B779A00BAE079 /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
-		C9C85733261B779A00BAE079 /* StudentsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsView.swift; sourceTree = "<group>"; };
+		C9C85733261B779A00BAE079 /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		C9C85734261B779A00BAE079 /* TeacherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherView.swift; sourceTree = "<group>"; };
 		C9C85735261B779B00BAE079 /* MailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
-		C9C85736261B779B00BAE079 /* AssignmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentView.swift; sourceTree = "<group>"; };
+		C9C85736261B779B00BAE079 /* MessagesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		C9C85737261B779B00BAE079 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		C9C85738261B779B00BAE079 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C9C85741261B779B00BAE079 /* LoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
@@ -281,10 +281,10 @@
 			isa = PBXGroup;
 			children = (
 				C9C85732261B779A00BAE079 /* AccountView.swift */,
-				C9C85733261B779A00BAE079 /* StudentsView.swift */,
+				C9C85733261B779A00BAE079 /* HistoryView.swift */,
 				C9C85734261B779A00BAE079 /* TeacherView.swift */,
 				C9C85735261B779B00BAE079 /* MailView.swift */,
-				C9C85736261B779B00BAE079 /* AssignmentView.swift */,
+				C9C85736261B779B00BAE079 /* MessagesView.swift */,
 				C9C85737261B779B00BAE079 /* MapView.swift */,
 				C9C85738261B779B00BAE079 /* HomeView.swift */,
 				C9C85741261B779B00BAE079 /* LoginScreen.swift */,
@@ -436,7 +436,7 @@
 				C9C8579C261BB67100BAE079 /* EPGradebook.xcdatamodeld in Sources */,
 				C9C85761261B779B00BAE079 /* Courses.swift in Sources */,
 				C9C85756261B779B00BAE079 /* Teacher+CoreData.swift in Sources */,
-				C9C85766261B779B00BAE079 /* StudentsView.swift in Sources */,
+				C9C85766261B779B00BAE079 /* HistoryView.swift in Sources */,
 				C9C85751261B779B00BAE079 /* CompoundEye.swift in Sources */,
 				C9C85764261B779B00BAE079 /* EPGradebookApp.swift in Sources */,
 				C9C85773261B779B00BAE079 /* LoginScreen.swift in Sources */,
@@ -461,7 +461,7 @@
 				C9C8576A261B779B00BAE079 /* MapView.swift in Sources */,
 				C9C8576B261B779B00BAE079 /* HomeView.swift in Sources */,
 				C9C8575F261B779B00BAE079 /* Program.swift in Sources */,
-				C9C85769261B779B00BAE079 /* AssignmentView.swift in Sources */,
+				C9C85769261B779B00BAE079 /* MessagesView.swift in Sources */,
 				C9C8575B261B779B00BAE079 /* Teacher.swift in Sources */,
 				C9C8575A261B779B00BAE079 /* CourseClass.swift in Sources */,
 				C9C85760261B779B00BAE079 /* Student.swift in Sources */,

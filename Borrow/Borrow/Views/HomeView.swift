@@ -10,6 +10,7 @@ import Combine
 import CoreLocation
 import MapKit
 
+//TODO: Need to modify home to have maps cleaned up and listing products below
 struct HomeView: View {
   
   @State private var userTrackingMode: MapUserTrackingMode = MapUserTrackingMode.follow
@@ -57,11 +58,12 @@ struct LocationInformation: View {
   var body: some View {
  
     VStack {
-      LocationDetailView(title: "Latitude", value: self.locationManager.location.coordinate.latitude)
-      LocationDetailView(title: "Longitude", value: self.locationManager.location.coordinate.longitude)
-      LocationDetailView(title: "Altitude", value: self.locationManager.location.altitude)
-      LocationDetailView(title: "Vertical Accuracy", value: self.locationManager.location.verticalAccuracy)
-      LocationDetailView(title: "Horizontal Accuracy", value: self.locationManager.location.horizontalAccuracy)
+        
+//      LocationDetailView(title: "Latitude", value: self.locationManager.location.coordinate.latitude)
+//      LocationDetailView(title: "Longitude", value: self.locationManager.location.coordinate.longitude)
+//      LocationDetailView(title: "Altitude", value: self.locationManager.location.altitude)
+//      LocationDetailView(title: "Vertical Accuracy", value: self.locationManager.location.verticalAccuracy)
+//      LocationDetailView(title: "Horizontal Accuracy", value: self.locationManager.location.horizontalAccuracy)
     }
     
   }
@@ -69,19 +71,19 @@ struct LocationInformation: View {
 }
 
 //fills the latitude longitude altitude etc field data
-struct LocationDetailView: View {
-  
-  var title: String
-  var value: Double
-  
-  var body: some View {
-    HStack {
-      Text(title)
-      Spacer()
-      Text("\(value)")
-    }
-  }
-}
+//struct LocationDetailView: View {
+//
+//  var title: String
+//  var value: Double
+//
+//  var body: some View {
+//    HStack {
+//      Text(title)
+//      Spacer()
+//      Text("\(value)")
+//    }
+//  }
+//}
 
 struct HomeLocationView_Previews: PreviewProvider {
 
