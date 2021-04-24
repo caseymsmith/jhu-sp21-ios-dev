@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C916E9AB2633F00C00496AD1 /* ListForBorrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C916E9AA2633F00C00496AD1 /* ListForBorrowView.swift */; };
+		C916E9B02633F33D00496AD1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C916E9AF2633F33C00496AD1 /* SignUpView.swift */; };
 		C9C856ED261B771200BAE079 /* BorrowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C856EC261B771200BAE079 /* BorrowTests.swift */; };
 		C9C856F8261B771300BAE079 /* BorrowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C856F7261B771300BAE079 /* BorrowUITests.swift */; };
 		C9C85748261B779B00BAE079 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C8570D261B779A00BAE079 /* Persistence.swift */; };
@@ -71,6 +73,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C916E9AA2633F00C00496AD1 /* ListForBorrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListForBorrowView.swift; sourceTree = "<group>"; };
+		C916E9AF2633F33C00496AD1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		C9C856D2261B770D00BAE079 /* Borrow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Borrow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C856E8261B771200BAE079 /* BorrowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BorrowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C856EC261B771200BAE079 /* BorrowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowTests.swift; sourceTree = "<group>"; };
@@ -289,6 +293,8 @@
 				C9C85738261B779B00BAE079 /* HomeView.swift */,
 				C9C85741261B779B00BAE079 /* LoginScreen.swift */,
 				C9C85742261B779B00BAE079 /* LoadingView.swift */,
+				C916E9AA2633F00C00496AD1 /* ListForBorrowView.swift */,
+				C916E9AF2633F33C00496AD1 /* SignUpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -436,6 +442,7 @@
 				C9C8579C261BB67100BAE079 /* EPGradebook.xcdatamodeld in Sources */,
 				C9C85761261B779B00BAE079 /* Courses.swift in Sources */,
 				C9C85756261B779B00BAE079 /* Teacher+CoreData.swift in Sources */,
+				C916E9AB2633F00C00496AD1 /* ListForBorrowView.swift in Sources */,
 				C9C85766261B779B00BAE079 /* HistoryView.swift in Sources */,
 				C9C85751261B779B00BAE079 /* CompoundEye.swift in Sources */,
 				C9C85764261B779B00BAE079 /* EPGradebookApp.swift in Sources */,
@@ -448,6 +455,7 @@
 				C9C8575D261B779B00BAE079 /* AssignmentGraderModel.swift in Sources */,
 				C9C85755261B779B00BAE079 /* CourseClass+CoreData.swift in Sources */,
 				C9C85768261B779B00BAE079 /* MailView.swift in Sources */,
+				C916E9B02633F33D00496AD1 /* SignUpView.swift in Sources */,
 				C9C85774261B779B00BAE079 /* LoadingView.swift in Sources */,
 				C9C85754261B779B00BAE079 /* Student+CoreData.swift in Sources */,
 				C9C85759261B779B00BAE079 /* AssignmentType.swift in Sources */,
