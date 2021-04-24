@@ -6,7 +6,34 @@
 //
 
 import SwiftUI
+import FBSDKCoreKit
 import FBSDKLoginKit
+
+//Source: https://stackoverflow.com/questions/56619043/show-line-separator-view-in-swiftui/56619112
+struct LabelledDivider: View {
+
+    let label: String
+    let horizontalPadding: CGFloat
+    let color: Color
+
+    init(label: String, horizontalPadding: CGFloat = 20, color: Color = .gray) {
+        self.label = label
+        self.horizontalPadding = horizontalPadding
+        self.color = color
+    }
+
+    var body: some View {
+        HStack {
+            line
+            Text(label).foregroundColor(color)
+            line
+        }
+    }
+
+    var line: some View {
+        VStack { Divider().background(color) }.padding(horizontalPadding)
+    }
+}
 
 struct LoginScreen: View {
         
@@ -20,11 +47,11 @@ struct LoginScreen: View {
             
             return AnyView(VStack {
                 
-                Spacer(minLength: 100)
+                Spacer(minLength: 70)
                 Image("BorrowAppLogo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                Spacer(minLength: 10)
+                Spacer(minLength: 20)
                 VStack(alignment: .center) {
                     HStack {
                         Spacer(minLength: 50)
@@ -42,11 +69,14 @@ struct LoginScreen: View {
                         self.saveUserName(userName: self.username)
                         self.userAuth.login()
                     }, label: { Text("Login") })
-                    Button(action: {
-                        //TODO: Add sign up screen
-                    }, label: { Text("Sign Up") })
-                    Spacer(minLength: 50)
+                    NavigationLink(destination: SignUpView()) {
+                        Text("Sign Up")
+                    }
+                    Spacer(minLength: 25)
 
+                    //Source: https://stackoverflow.com/questions/56619043/show-line-separator-view-in-swiftui/56619112
+                    LabelledDivider(label: "or")
+                    Spacer(minLength: 25)
                     
                     //TODO: Update login with facebook button using SDK for more iconic button
                     Button(action: {
@@ -59,7 +89,6 @@ struct LoginScreen: View {
                             .background(Color.blue)
                             .clipShape(Capsule())
                     })
-                    
                 }
                 Spacer(minLength: 50)
             })

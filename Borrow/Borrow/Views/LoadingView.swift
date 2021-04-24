@@ -18,7 +18,8 @@ struct LoadingView: View {
   }
   
   var body: some View {
-    Text("Loading Data from Network...")
+    //Found this activity indicator that comes with xcode/apple developers! Fun. Source: https://stackoverflow.com/questions/56496638/activity-indicator-in-swiftui
+    ProgressView()
   }
 }
 

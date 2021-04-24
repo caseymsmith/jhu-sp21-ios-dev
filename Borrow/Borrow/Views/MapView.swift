@@ -8,141 +8,43 @@
 import SwiftUI
 import MapKit
 
-struct MapView: UIViewRepresentable {
-  
-  let locationManager = CLLocationManager()
-  var map = MKMapView(frame: .zero)
-  var students: [Student]
-  var center: Bool
-  
-  init(students: [Student], center: Bool) {
-    self.students = students
-    self.center = center
-  }
-  
-  func makeCoordinator() -> Coordinator {
-    return Coordinator(mapView:self)
-  }
-  
-  func makeUIView(context: UIViewRepresentableContext<MapView>) -> MKMapView {
+struct MapView: View {
+    @State private var city = Array<String>.init(repeating: "La Jolla", count: 1)
+    @State private var coordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 32.7157, longitude: -117.1611), span: MKCoordinateSpan(latitudeDelta: 1.5, longitudeDelta: 1.5))
     
-    map.delegate = context.coordinator
-    
-    for student in students {
-      makeAnnotationForStudent(student, on: map)
-    }
-    
-    return map
-  }
-  
-  func updateUIView(_ view: MKMapView, context: UIViewRepresentableContext<MapView>) {
-  }
-  
-  private func makeAnnotationForStudent(_ student: Student, on map: MKMapView) {
-    
-    getCoordinatesFor(student) { coord, error in
-      
-      let studentLocation = EPLocation(student: student, coordinate: CLLocationCoordinate2DMake(coord.latitude, coord.longitude))
-      map.addAnnotation(studentLocation)
-      if self.center {
-        let span = MKCoordinateSpan(latitudeDelta: 0.015, longitudeDelta: 0.015)
-        let region = MKCoordinateRegion(center: coord, span: span)
-        map.setRegion(region, animated: true)
-      }
-    }
-  }
-  
-  private func getCoordinatesFor(_ student: Student, completion: @escaping (CLLocationCoordinate2D, NSError?) -> ())
-  {
-    let geoCoder = CLGeocoder()
-    geoCoder.geocodeAddressString(student.address, completionHandler: { placemarks, error in guard error == nil, let placemark = placemarks?[0] else {
-      completion(kCLLocationCoordinate2DInvalid, error as NSError?)
-      return
-      }
-      
-      let location = placemark.location!
-      completion(location.coordinate, nil)
-      return
-      
-    })
-  }
-}
+    init() {
 
-class Coordinator: NSObject, MKMapViewDelegate {
-  
-  var mapView: MapView!
-  let regionRadius:CLLocationDistance = 1000.0
-  @State var display = false
-  
-  init(mapView: MapView) {
-    super.init()
-    self.mapView = mapView
-  }
-  
-  //mkannotationview
-  func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?
-  {
-    guard let annotation = annotation as? EPLocation else { return nil }
-    
-    let identifier = "pin"
-    var view: MKPinAnnotationView
-    if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-      as? MKPinAnnotationView
-    {
-      dequeuedView.annotation = annotation
-      view = dequeuedView
+        UITableView.appearance().tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: Double.leastNonzeroMagnitude))
     }
-    else
-    {
-      view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-      view.canShowCallout = true
-      view.calloutOffset = CGPoint(x: -5, y: 5)
-      view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-    }
-    return view
-    
-  }
-  
-//  func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)
-//  {
-//    print("tapped callout")
-//    let annotation = view.annotation as! EPLocation
-//    let student = annotation.student
-//
-//    self.mapView.sheet(isPresented: self.$display){
-//      Text("hello")
-//    }
-//
-//    self.display.toggle()
-////    let cacheItem = geocacheManager.getGeocacheItemForName(name: locationName!)
-////    detailVC = storyboard?.instantiateViewController(withIdentifier: "detailVC") as? GeocacheLocationDetailViewController
-////    detailVC!.item = cacheItem
-////
-////
-////    self.navigationController?.pushViewController(detailVC!, animated: true)
-//    //can put code here to respond to disclosure button taps
-//  }
-  
-}
 
-class EPLocation: NSObject, MKAnnotation
-{
-  var title: String?
-  var student: Student
-  var coordinate: CLLocationCoordinate2D
-  
-  init(student: Student, coordinate: CLLocationCoordinate2D)
-  {
-    self.title = student.name
-    self.student = student
-    self.coordinate = coordinate
-    
-    super.init()
-  }
+    var body: some View {
+            VStack {
+                HStack{
+                    //TODO: put onclick on text field for location
+                    TextField("Current Location", text: $city[0])
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding(.leading,4)
+                    NavigationLink(destination: ListForBorrowView()) {
+                            Text("List For Borrow")
+                            .fontWeight(.semibold)
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.orange)
+                            .cornerRadius(15)
+                            .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 50, maxHeight: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    }
+                }
+                Map(coordinateRegion: $coordinateRegion)
+                    .frame(width: 350, height: 400, alignment: .center)
+                Text("Products List Here")
+                    .font(.system(size: 18, weight: .bold, design: .rounded))
+                    .multilineTextAlignment(.leading)
+            }
+    }
 }
 
 struct MapView_Previews: PreviewProvider {
   static var previews: some View {
-    MapView(students: ClassAssignmentsModelTestData().students!, center: false)
+    MapView()
   }
 }
