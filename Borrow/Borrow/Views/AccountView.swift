@@ -34,24 +34,35 @@ struct AccountView: View {
                 //Reference: https://stackoverflow.com/questions/56491881/move-textfield-up-when-the-keyboard-has-appeared-in-swiftui
                 TextField("Email", text: $email[0])
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.leading, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                    .padding(.trailing, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 TextField("Old Password", text: $oldPassword[0])
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.leading, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                    .padding(.trailing, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 TextField("New Password", text: $newPassword[0])
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.leading, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                    .padding(.trailing, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 TextField("Street Address", text: $streetAddress[0])
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.leading, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                    .padding(.trailing, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 TextField("City", text: $city[0])
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.leading, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                    .padding(.trailing, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 HStack {
                     TextField("State", text: $state[0])
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     TextField("Zip", text: $zip[0])
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                }
+                }.padding(.leading, 10)
+                .padding(.trailing, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 Button(action: {
                     //TODO: Update any changed account info
                 }, label: {
-                    Text("Update")
+                    Text("   Update   ")
                         .fontWeight(.semibold)
                         .padding()
                         .foregroundColor(.white)

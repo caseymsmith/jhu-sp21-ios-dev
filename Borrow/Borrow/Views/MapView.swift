@@ -9,8 +9,8 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
-    @State private var city = Array<String>.init(repeating: "La Jolla", count: 1)
-    @State private var coordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 32.7157, longitude: -117.1611), span: MKCoordinateSpan(latitudeDelta: 1.5, longitudeDelta: 1.5))
+    @State private var city = Array<String>.init(repeating: "Downtown San Diego", count: 1)
+    @State private var coordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 32.7157, longitude: -117.1611), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
     
     init() {
 
@@ -18,12 +18,14 @@ struct MapView: View {
     }
 
     var body: some View {
+        NavigationView {
             VStack {
                 HStack{
                     //TODO: put onclick on text field for location
                     TextField("Current Location", text: $city[0])
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding(.leading,4)
+                        .padding(.trailing,-10)
                     NavigationLink(destination: ListForBorrowView()) {
                             Text("List For Borrow")
                             .fontWeight(.semibold)
@@ -40,6 +42,7 @@ struct MapView: View {
                     .font(.system(size: 18, weight: .bold, design: .rounded))
                     .multilineTextAlignment(.leading)
             }
+        }
     }
 }
 

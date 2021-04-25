@@ -14,3 +14,9 @@ struct ListForBorrowView: View {
         }
     }
 }
+
+struct ListForBorrowView_Previews: PreviewProvider {
+  static var previews: some View {
+    ListForBorrowView()
+  }
+}

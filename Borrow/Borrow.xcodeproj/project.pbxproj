@@ -45,7 +45,7 @@
 		C9C85768261B779B00BAE079 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85735261B779B00BAE079 /* MailView.swift */; };
 		C9C85769261B779B00BAE079 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85736261B779B00BAE079 /* MessagesView.swift */; };
 		C9C8576A261B779B00BAE079 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85737261B779B00BAE079 /* MapView.swift */; };
-		C9C8576B261B779B00BAE079 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85738261B779B00BAE079 /* HomeView.swift */; };
+		C9C8576B261B779B00BAE079 /* TermsConditionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85738261B779B00BAE079 /* TermsConditionsView.swift */; };
 		C9C85773261B779B00BAE079 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85741261B779B00BAE079 /* LoginScreen.swift */; };
 		C9C85774261B779B00BAE079 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85742261B779B00BAE079 /* LoadingView.swift */; };
 		C9C85775261B779B00BAE079 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85743261B779B00BAE079 /* ContentView.swift */; };
@@ -118,7 +118,7 @@
 		C9C85735261B779B00BAE079 /* MailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		C9C85736261B779B00BAE079 /* MessagesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		C9C85737261B779B00BAE079 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		C9C85738261B779B00BAE079 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C9C85738261B779B00BAE079 /* TermsConditionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsConditionsView.swift; sourceTree = "<group>"; };
 		C9C85741261B779B00BAE079 /* LoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		C9C85742261B779B00BAE079 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		C9C85743261B779B00BAE079 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -290,7 +290,7 @@
 				C9C85735261B779B00BAE079 /* MailView.swift */,
 				C9C85736261B779B00BAE079 /* MessagesView.swift */,
 				C9C85737261B779B00BAE079 /* MapView.swift */,
-				C9C85738261B779B00BAE079 /* HomeView.swift */,
+				C9C85738261B779B00BAE079 /* TermsConditionsView.swift */,
 				C9C85741261B779B00BAE079 /* LoginScreen.swift */,
 				C9C85742261B779B00BAE079 /* LoadingView.swift */,
 				C916E9AA2633F00C00496AD1 /* ListForBorrowView.swift */,
@@ -467,7 +467,7 @@
 				C9C85757261B779B00BAE079 /* ClassAssignmentsCoreDataModel.swift in Sources */,
 				C9C85775261B779B00BAE079 /* ContentView.swift in Sources */,
 				C9C8576A261B779B00BAE079 /* MapView.swift in Sources */,
-				C9C8576B261B779B00BAE079 /* HomeView.swift in Sources */,
+				C9C8576B261B779B00BAE079 /* TermsConditionsView.swift in Sources */,
 				C9C8575F261B779B00BAE079 /* Program.swift in Sources */,
 				C9C85769261B779B00BAE079 /* MessagesView.swift in Sources */,
 				C9C8575B261B779B00BAE079 /* Teacher.swift in Sources */,

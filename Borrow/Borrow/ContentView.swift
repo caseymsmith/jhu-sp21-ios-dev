@@ -89,7 +89,7 @@ struct CoreDataView: View {
   
   var body: some View {
       TabView(selection: $selection) {
-        HomeView()
+        MapView()
           .tabItem { Image(systemName: "house.fill") ; Text("Home") }
           .tag(1)
         MessagesView(contentMessage: "Hello", isCurrentUser: true).tabItem { Image(systemName: "message.circle") ; Text("Messages") }.tag(2)
