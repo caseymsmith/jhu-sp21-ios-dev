@@ -36,10 +36,18 @@ struct ListForBorrowView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding(.leading, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 .padding(.trailing, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-            TextField("Hour", text: $timeUnit[0])
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.leading, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                .padding(.trailing, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+            //Group box source: https://stackoverflow.com/questions/56513339/is-there-a-way-to-create-a-dropdown-menu-button-in-swiftui
+            GroupBox {
+                DisclosureGroup("Per Time Unit") {
+                    Text("Hour")
+                    Text("Day")
+                    Text("Week")
+                }
+            }.padding(.leading, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+             .padding(.trailing, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+            .foregroundColor(Color.gray)
+            .border(Color.gray)
+            .background(Color.white)
             TextField("Item Replacement Cost", text: $replacement[0])
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding(.leading, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
