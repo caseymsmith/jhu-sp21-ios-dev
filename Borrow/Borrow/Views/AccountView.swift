@@ -72,9 +72,6 @@ struct AccountView: View {
             }
             
         }
-        
-        
-        
     }
     
     struct AccountView_Previews: PreviewProvider {
