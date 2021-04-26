@@ -2,7 +2,7 @@
 //  BorrowApp.swift
 //  Borrow
 //
-//  Created by Casey on 4/5/21.
+//  Created by Casey on 1/20/21.
 //
 
 import SwiftUI
@@ -13,8 +13,8 @@ struct BorrowApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            LoginScreen()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext).environmentObject(UserAuth())
         }
     }
 }

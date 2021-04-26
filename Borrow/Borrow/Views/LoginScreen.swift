@@ -96,13 +96,12 @@ struct LoginScreen: View {
                 })
         }
         else {
-            let dataModel = ClassAssignmentsCoreDataModel()
-            if networkDataLoaded == false {
-                return AnyView(LoadingView(dataModel: dataModel, networkDataLoaded: $networkDataLoaded))
-            }
-            else {
-                return AnyView(ContentView(model: dataModel))
-            }
+//            if networkDataLoaded == false {
+//                return AnyView(LoadingView( networkDataLoaded: $networkDataLoaded))
+//            }
+//            else {
+                return AnyView(ContentView())
+            //}
         }
     }
     

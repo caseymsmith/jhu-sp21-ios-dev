@@ -73,29 +73,30 @@ struct SignUpView: View {
                         }.padding(.leading, 10)
                         .padding(.trailing, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                     }.padding(.bottom, 10)
-                    if showTermsAndConditionsView {
-                        TermsConditionsView(checked: $checked)
-                    } else {
-                        Button(action: {
-                            self.showTermsAndConditionsView = true
-                            self.hidden()
-                        }, label: {
-                            Text("   Sign Up   ")
-                                .fontWeight(.semibold)
-                                .padding()
-                                .foregroundColor(.white)
-                                .background(Color.green)
-                                .cornerRadius(20)
-                        })
-                    }
-//                        NavigationLink(destination: TermsConditionsView(checked: $checked)) {
+//                    if showTermsAndConditionsView {
+//                        TermsConditionsView(checked: $checked)
+//                    } else {
+//                        Button(action: {
+//                            self.showTermsAndConditionsView = true
+//                            self.hidden()
+//                        }, label: {
 //                            Text("   Sign Up   ")
 //                                .fontWeight(.semibold)
 //                                .padding()
 //                                .foregroundColor(.white)
 //                                .background(Color.green)
 //                                .cornerRadius(20)
-//                        }
+//                        })
+//                    }
+                    
+                        NavigationLink(destination: TermsConditionsView(checked: $checked)) {
+                            Text("   Sign Up   ")
+                                .fontWeight(.semibold)
+                                .padding()
+                                .foregroundColor(.white)
+                                .background(Color.green)
+                                .cornerRadius(20)
+                        } //TODO: need to setup core data for sign up here
                     }
                 }
             }

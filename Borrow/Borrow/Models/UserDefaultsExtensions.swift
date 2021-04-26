@@ -15,14 +15,3 @@ extension LoginScreen {
   }
   
 }
-
-extension CourseClass {
-  
-  func addEnrolledClass(newClass: CourseClass) {
-    
-    var currentClasses = UserDefaults.standard.array(forKey: "enrolledClasses")
-    currentClasses?.append(newClass)
-    UserDefaults.standard.set(currentClasses, forKey: "enrolledClasses")
-    
-  }
-}

@@ -60,7 +60,7 @@ struct AccountView: View {
                 }.padding(.leading, 10)
                 .padding(.trailing, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 Button(action: {
-                    //TODO: Update any changed account info
+                    //TODO: Update any changed account info need to setup core data here
                 }, label: {
                     Text("   Update   ")
                         .fontWeight(.semibold)
